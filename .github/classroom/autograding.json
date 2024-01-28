@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "coverage nodelist",
+      "setup": "sudo -H pip3 install coverage >/dev/null 2>&1",
+      "run": "python -m coverage run stack_nodelist_tests.py 2>/dev/null; python -m coverage report -m --fail-under=100",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "type check nodelist",
+      "setup": "sudo -H python3 -m pip install mypy==0.982 >/dev/null 2>&1",
+      "run": "echo \"mypy type check\"; mypy --disallow-untyped-defs stack_nodelist.py stack_nodelist_tests.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "coverage array",
+      "setup": "",
+      "run": "python -m coverage run stack_array_tests.py 2>/dev/null; python -m coverage report -m --fail-under=100",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "type check array",
+      "setup": "",
+      "run": "echo \"mypy type check\"; mypy --disallow-untyped-defs stack_array.py stack_array_tests.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "nodelist tests",
+      "setup": "",
+      "run": "python stack_nodelist_tests.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "array tests",
+      "setup": "",
+      "run": "python3 stack_array_tests.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
