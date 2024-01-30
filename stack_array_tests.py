@@ -34,27 +34,27 @@ class TestLab2(unittest.TestCase):
         with self.assertRaises(IndexError):
             stack6.push(3)
 
-    def test_pop(self):
+    def test_pop(self) -> None:
         stack7 = Stack(2)
         with self.assertRaises(IndexError):
             stack7.pop()
 
-    def test_pop2(self):
+    def test_pop2(self) -> None:
         stack8 = Stack(2)
         stack8.push(2)
         self.assertEqual(stack8.pop(), 2)
 
-    def test_peek(self):
+    def test_peek(self) -> None:
         stack9 = Stack(1)
         with self.assertRaises(IndexError):
             stack9.peek()
 
-    def test_peek2(self):
+    def test_peek2(self) -> None:
         stack10 = Stack(2)
         stack10.push(1)
         self.assertEqual(stack10.peek(), 1)
 
-    def test_size(self):
+    def test_size(self) -> None:
         stack11 = Stack(4)
         stack11.push(2)
         stack11.push(2)
